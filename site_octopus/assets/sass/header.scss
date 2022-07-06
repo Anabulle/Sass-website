@@ -1,0 +1,39 @@
+@use 'variable.scss' as*;
+body {
+    background-color: $background;
+}
+
+@mixin shadow {
+    box-shadow: 2px 2px 15px;
+}
+
+nav {
+    background-color: $primary;
+    @include shadow;
+    ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 3rem;
+        transition: all 2s ease-out;
+        li {
+            color: $secondary;
+            font-size: 2rem;
+            border-top: 2px solid transparent;
+        }
+        li:hover {
+            border-top: 2px solid $quarternary;
+        }
+    }
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    img {
+        border-radius: 50%;
+        width: 100px;
+        margin-top: -40px;
+        @include shadow;
+    }
+    margin-bottom: 20px;
+}
